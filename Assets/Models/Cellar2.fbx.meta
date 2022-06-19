@@ -2,7 +2,10 @@ fileFormatVersion: 2
 guid: d230951169f525f3f87f9361e98b6723
 ModelImporter:
   serializedVersion: 21202
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: 8440248360967096626
+    second: Camera|CameraAction
   externalObjects: {}
   materials:
     materialImportMode: 2

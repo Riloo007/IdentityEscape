@@ -70,7 +70,7 @@ public class playerControl : MonoBehaviour
 
         XRotation -= mouseY;
         XRotation = Mathf.Clamp(XRotation, -90f, 90f);
-        Vector3 move = (transform.right * x + transform.forward * z) * walkingSpeed * Time.deltaTime + velocity;
+        Vector3 move = (transform.right * x + transform.forward * z) * walkingSpeed * Time.deltaTime + velocity * Time.deltaTime * 50;
 
         playerCamera.transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
         transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(transform.eulerAngles + Vector3.up * mouseX), lookSmooth * lookSpeed);

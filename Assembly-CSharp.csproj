@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{48530cf8-578a-c0c6-3352-f9f5c38ba882}</ProjectGuid>
+    <ProjectGuid>{06b884c9-0603-3ca3-c0ef-738bf8d92f8d}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -36,11 +36,38 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/Button2.cs" />
-     <Compile Include="Assets/Scripts/Button1.cs" />
-     <Compile Include="Assets/Scripts/BoxBig.cs" />
+     <Compile Include="Assets/Scenes/TestScene/Scripts/Button2.cs" />
+     <Compile Include="Assets/Scenes/TestScene/Scripts/Button1.cs" />
+     <Compile Include="Assets/Scripts/MessagingSystem.cs" />
+     <Compile Include="Assets/Scenes/TestScene/Scripts/BoxBig.cs" />
      <Compile Include="Assets/Scripts/Action.cs" />
+     <Compile Include="Assets/BrickFall.cs" />
+     <Compile Include="Assets/Scenes/TestScene/Scripts/Button3.cs" />
+     <Compile Include="Assets/Scenes/Level1/Scripts/L01_Trapdoor.cs" />
+     <Compile Include="Assets/Scenes/Level1/Scripts/L01_Door.cs" />
      <Compile Include="Assets/Scripts/playerControl.cs" />
+     <Compile Include="Assets/Scripts/DynamicLight.cs" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" />
+     <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
+     <None Include="Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" />
+     <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>/home/riley/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -282,13 +309,13 @@
         <HintPath>/home/riley/Unity/Hub/Editor/2021.3.4f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="ReportGeneratorMerged">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
         <HintPath>/home/riley/Unity/Hub/Editor/2021.3.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -669,94 +696,94 @@
         <HintPath>/home/riley/Unity/Hub/Editor/2021.3.4f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Sysroot.Linux_x86_64">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Sysroot.Linux_x86_64.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Toolchain.Linux-x86_64">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Toolchain.Linux-x86_64.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.EditorCoroutines.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Analytics">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Shared.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Services.Core.Environments">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
     </Reference>
     <Reference Include="Unity.SysrootPackage.Editor">
-        <HintPath>/home/riley/Documents/App Saves/Unity/Projects/Identity Escape/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
+        <HintPath>/home/riley/Documents/App Saves/Unity/IdentityEscape/Library/ScriptAssemblies/Unity.SysrootPackage.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{6da55d17-463b-7b68-bf8c-d5d147f78b8b}</Project>
+      <Project>{d778df1c-5423-6a4e-d9ca-e49f04833bd0}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{cc995c70-d23b-d98a-468e-9addf44b4e45}</Project>
+      <Project>{cb381036-bcb8-0127-5d74-4befc3739dbc}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
   </ItemGroup>

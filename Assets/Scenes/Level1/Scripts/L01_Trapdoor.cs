@@ -11,6 +11,6 @@ public class L01_Trapdoor : MonoBehaviour , Action
     public void Interact()
     {
         if(messages.Count > counter){counter += 1;}
-        msg.Message(messages[counter]);
+        msg.Message(messages[counter - 1]);
     }
 }

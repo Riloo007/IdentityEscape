@@ -246,10 +246,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3692211963240923652, guid: 2f06f8fd8536c0677b399a11a5a06814, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6640703479935325540, guid: 2f06f8fd8536c0677b399a11a5a06814, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -894,8 +890,8 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
-    m_Resolution: 0
+    m_Type: 2
+    m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0

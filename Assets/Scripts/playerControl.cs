@@ -11,7 +11,7 @@ public class playerControl : MonoBehaviour
     public float jumpSpeed = 0.6f;
     public float gravity = -0.05f;
     public Camera playerCamera;
-    public float lookSpeed = 200.0f;
+    public float lookSpeed = 150.0f;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
     public float lookSmooth = 1;
@@ -57,7 +57,7 @@ public class playerControl : MonoBehaviour
                 if(LClick) {
                     HitInfo.collider.gameObject.GetComponent<Action>().Interact();
                 }
-            }
+            }else {cursor.localScale = Vector3.one * 0.2f;}
         } else {cursor.localScale = Vector3.one * 0.2f;}
 
         // Physics and Movement
@@ -73,7 +73,8 @@ public class playerControl : MonoBehaviour
         Vector3 move = (transform.right * x + transform.forward * z) * walkingSpeed * Time.deltaTime + velocity * Time.deltaTime * 50;
 
         playerCamera.transform.localRotation = Quaternion.Euler(XRotation, 0f, 0f);
-        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(transform.eulerAngles + Vector3.up * mouseX), lookSmooth * lookSpeed);
+        transform.eulerAngles += Vector3.up * mouseX;
+        //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(transform.eulerAngles + Vector3.up * mouseX), lookSmooth * lookSpeed);
         characterController.Move(move);
     }
 }
